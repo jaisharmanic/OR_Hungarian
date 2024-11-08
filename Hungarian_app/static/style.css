@@ -1,0 +1,166 @@
+/* General Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url('Images/Image.jpg.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.container {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+h1 {
+    color: #e0e0e0;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Label and Input Styling */
+label {
+    font-weight: 600;
+    color: #e0e0e0;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+input[type="number"] {
+    width: 65px;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    text-align: center;
+    font-size: 16px;
+    color: #34495e;
+    background-color: #ffffff;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border 0.3s;
+}
+
+input[type="number"]:hover {
+    border-color: #3498db;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 6px #3498db;
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Matrix Container */
+.matrix-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.matrix-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+table:hover {
+    transform: scale(1.01);
+}
+
+table, th, td {
+    border: 1px solid #d1d5db;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 700;
+    padding: 16px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #333333;
+}
+
+/* Enhancements for Mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+    input[type="number"] {
+        width: 50px;
+        padding: 10px;
+    }
+    .submit-btn {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+    th, td {
+        padding: 10px;
+    }
+}

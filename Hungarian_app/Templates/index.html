@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungarian Method Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function generateMatrix() {
+            const size = document.getElementById('size').value;
+            const matrixContainer = document.getElementById('matrix-container');
+            matrixContainer.innerHTML = '';
+            
+            for (let i = 0; i < size; i++) {
+                const row = document.createElement('div');
+                row.className = 'matrix-row';
+                for (let j = 0; j < size; j++) {
+                    const input = document.createElement('input');
+                    input.type = 'number';
+                    input.name = `row${i}`;
+                    input.required = true;
+                    row.appendChild(input);
+                }
+                matrixContainer.appendChild(row);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hungarian Method Solver</h1>
+        <form method="POST">
+            <label for="size">Enter matrix size (n x n):</label>
+            <input type="number" id="size" name="size" min="2" required>
+            <button type="button" onclick="generateMatrix()">Generate Matrix</button>
+
+            <div id="matrix-container" class="matrix-container"></div>
+
+            <button type="submit" class="submit-btn">Solve</button>
+        </form>
+    </div>
+</body>
+</html>
